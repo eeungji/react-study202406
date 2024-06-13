@@ -1,8 +1,11 @@
-import logo from './logo.svg';
+
 import './App.css';
 import React from 'react';
+import Hello from './components/Hello';
+import Bye from './components/Bye';
+import Greet from './components/Greet';
 // App 이라는 이름으로 태그들이 묶여있음.
-// 컴포넌트라고 부름 태그들을 묶어놓고 있음.
+// 컴포넌트라고 부름 태그들을 묶어놓고 있음. (재사용 가능한 코드의 묶음)
 
 function App() {
 
@@ -21,14 +24,10 @@ function App() {
   const hello = '안녕안녕?';
   return (
     <>
-      <div className="App">
-        <h1>{hello}</h1>
-        {$h2}
-      </div>
-      <div className='noname'>
-        <input type="text" />
-        <label htmlfor=""></label>
-      </div>
+      <Bye />
+      <Hello />
+      <Bye />
+      <Greet />
     </>
   );
 }
@@ -37,6 +36,6 @@ export default App;
 
 
 
-// 22행 중괄호는 js에 없는 특별한 문법
+
 // return은 태그 여러개 보낼 수 없음.
 // 형제 태그가 있는 경우 반드시 부모태그 하나로 감싸줘야 함
